@@ -42,3 +42,23 @@ dont start with a root, for example "/".
 
 ## My Solve
 The flag for the above challenge is pwn.college{wolcA-EtDr6wX20d3sLC-qfvlTH.QX5QTN0wCN1AzNzEzW}
+
+# Explicit Relative Paths, from /
+In the previous challenge, the relative path we used is "naked". THe key difference is that in explicit relative paths we use " . " or " .. " at the beginning of the path, i.e. the path is stated. But in the case of implicit, the relative path doesn't use ./ , ../ etc. It is a slightly inferior version than explicit as explicit prevents any sort of mistake incase the path is complex. 
+
+## My Solve
+The flag for the above challenge is pwn.college{MZPtEdEszZmwM1SXe4ONvDaKQyW.QXwUTN0wCN1AzNzEzW}
+
+
+# Implicit Relative Path
+This is similar to the previous challenges but just adds a safety factor of not being able to use the /challenge/run command. We just have to use the explicit relative path " . " to run the program. This explicitly tells Linux to execute the program in the current directory
+
+## My solve
+THe flag for the above challenge is pwn.college{Mr1qbyEAXh2JMfvfvIvWDlXqzc0.QXxUTN0wCN1AzNzEzW}
+
+# Home Sweet Home
+In this challenge the home directory is /home/hacker 
+
+## My Solve 
+THe flag for the above challenge is pwn.college{gkpPzsnbm3mtXYHE-JU-DpNW_QA.QXzMDO0wCN1AzNzEzW}
+
