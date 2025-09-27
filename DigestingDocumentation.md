@@ -18,7 +18,7 @@ The flag for the above challenge is pwn.college{4uDo0CjK-L6VW9qEoYxzzKyIv-O.QX1I
 
 
 # Reading Manuals
-In this challenge we are using the man command which is short for manual. It gives us all sorts of information which would be related
+In this challenge, we are using the man command which is short for manual. It gives us all sorts of information which would be related
 to how some things work on the command terminal. We first use man challenge and rhen from there we get the secret optiion which is
 vbuhup 485 to access the flag. We use it as /challenge/challenge --vbuhup 485.
 
@@ -27,4 +27,12 @@ The flag for the above challenge is pwn.college{QZvbGuMhLuHJK48UpC5Jbxy1K-O.QX0E
 
 
 # Searching Manuals
+In this challenge, we use the command "man challenge" to go and find the flag using the / command which helps us in finding the flag by inputting /flag. Then it shows us that --gry gives the output of the flag and then we use /challenge/challenge --gry to obtain the flag after clicking q to escape from the manual
+
+## My Solve 
+The flag for the above challenge is pwn.college{UfNY0W4x9olw21nsf51k3sCPZWW.QX1EDO0wCN1AzNzEzW}
+
+
+
+# Searching For Manuals
 
