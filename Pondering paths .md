@@ -62,3 +62,5 @@ In this challenge the home directory is /home/hacker
 ## My Solve 
 THe flag for the above challenge is pwn.college{gkpPzsnbm3mtXYHE-JU-DpNW_QA.QXzMDO0wCN1AzNzEzW}
 
+
+
