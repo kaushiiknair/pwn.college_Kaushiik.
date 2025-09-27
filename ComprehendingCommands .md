@@ -80,5 +80,24 @@ The flag for the above challenge is pwn.college{8Yc7TkHpXUxJ536ecsQixhM_a4k.QXwU
 # Making Directories
 This challenge teaches us how to use the mkdir command which helps us make a directory, and its relatively simple. We run mkdir /tmp/pwn and make a college file using the touch command by specifying it in that directory (absolute path) and then we run the /challenge/run command which gives us the flag
 
-# My Solve
+## My Solve
 The flag for the above challenge is pwn.college{0_GfbxDjefeknXBn_BK48omc-ni.QXxMDO0wCN1AzNzEzW}
+
+# Finding Files
+This challenge involves us causing an error in the the command terminal by using the ls - /flag command which gives us the files that contain a flag but may not be the one that we are looking for. We have to use trial and error and use the cat function which will read the file and give us the one with the flag.
+
+## My solve 
+The flag for the above challenge is pwn.college{UmG3SkHV6E6rG0AdNiyOWw0cB1D.QXyMDO0wCN1AzNzEzW}
+
+
+# Linking Files 
+As given verbatim on the challenge, the goal is to link two files. Reading one file wouldnt give us the flag and hence we have to link two files which will help us in directing the command to read the end file which is 
+/flag /home/hacker/not-the-flag and to do this we use the ln -s command.
+
+## My Solve
+The flag for the above challenge is pwn.college{kQ97rWuTQ5uWooOruGX2Ulj4Z_p.QX5ETN1wCN1AzNzEzW}
+
+
+
+
+
