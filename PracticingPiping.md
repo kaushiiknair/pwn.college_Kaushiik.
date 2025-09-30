@@ -317,8 +317,48 @@ THe flag for the above challenge is pwn.college{MZYqn5x9hHmq3KIR2XbecHCYVvp.QXxQ
 
 
 # Named Pipes
+FOr this challenge we have to use two terminals to get the necessary flag, i.e final output. by using the cat /tmp/flag_fifo
+
+
+```
+Terminal 1
+
+hacker@piping~named-pipes:~$ mkfifo /tmp/flag_fifo
+hacker@piping~named-pipes:~$ /challenge/run > /tmp/flag_fifo
+You're successfully redirecting /challenge/run to a FIFO at /tmp/flag_fifo! 
+Bash will now try to open the FIFO for writing, to pass it as the stdout of 
+/challenge/run. Recall that operations on FIFOs will *block* until both the 
+read side and the write side is open, so /challenge/run will not actually be 
+launched until you start reading from the FIFO!
+^C
+hacker@piping~named-pipes:~$ ^C
+hacker@piping~named-pipes:~$ cat flag_fifo
+cat: flag_fifo: No such file or directory
+hacker@piping~named-pipes:~$ cat /tmp/flag_fifo
+^C
+hacker@piping~named-pipes:~$ /challenge/run
+The stdout of /challenge/run does not seem to point to a FIFO!
+hacker@piping~named-pipes:~$ /challenge/run > /tmp/flag_fifo
+You're successfully redirecting /challenge/run to a FIFO at /tmp/flag_fifo! 
+Bash will now try to open the FIFO for writing, to pass it as the stdout of 
+/challenge/run. Recall that operations on FIFOs will *block* until both the 
+read side and the write side is open, so /challenge/run will not actually be 
+launched until you start reading from the FIFO!
+hacker@piping~named-pipes:~$ 
+
+
+Temrminal 2
+kaushiik-s-nair@kaushiik-s-nair-HP-OmniBook-5-Flip-Laptop-14-fp0xxx:~$ ssh -i key hacker@dojo.pwn.college
+Connected!                                                                        
+hacker@piping~named-pipes:~$ cat /tmp/flag_fifo
+You've correctly redirected /challenge/run's stdout to a FIFO at 
+/tmp/flag_fifo! Here is your flag:
+pwn.college{Ey1f1kCBiDy2d3JZ6lWv88GxE_9.01MzMDOxwCN1AzNzEzW}
+```
+
 ## My Solve
-The flag for the above challenge is 
+The flag for the above challenge is pwn.college{Ey1f1kCBiDy2d3JZ6lWv88GxE_9.01MzMDOxwCN1AzNzEzW}
+
 
 
 
