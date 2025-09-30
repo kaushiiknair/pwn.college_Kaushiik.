@@ -141,6 +141,8 @@ THe flag for the above challenge is pwn.college{0-4Ku2R-7FjUT7HN2PNpYu5uE_q.0FN0
 
 
 # Multiple Options for Tab Completion
+## My Solve
+The flag for the above challenge is 
 
 
 
