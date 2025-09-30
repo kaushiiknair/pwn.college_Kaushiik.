@@ -88,6 +88,67 @@ The flag for the above challenge is pwn.college{UfNY0W4x9olw21nsf51k3sCPZWW.QX1E
 
 
 # Searching For Manuals
+In this challenge, we are using the man man command to find different ways to use other man commands and in this case man -k is used as shown below. When we run the program we get a code which we are to run with /challenge/challenge and then we will obtain our flag.
+
+```
+hacker@man~searching-for-manuals:~$ man man
+hacker@man~searching-for-manuals:~$ man -k /challenge/challenge
+sdbeyyzrah (1)       - print the flag!
+hacker@man~searching-for-manuals:~$ man sdbeyyzrah
+hacker@man~searching-for-manuals:~$ /challenge/challenge --sdbeyy 592
+```
+## My Solve 
+THe flag for the above challenge is pwn.college{AsdM_be-5WCyFyRz929r3aPDHhA.QX2EDO0wCN1AzNzEzW}
+
+
+
+# Helpful Programs
+In this challenge we are using the help command to print a value for us by using the '-p' arguement and then using the '-g' arguement by inserting the value next to it and running it alongside /challenge/challenge to receive the flag
+
+```
+hacker@man~helpful-programs:~$ /challenge/challenge -h
+usage: a challenge to make you ask for help [-h] [--fortune] [-v] [-g GIVE_THE_FLAG] [-p]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --fortune             read your fortune
+  -v, --version         get the version number
+  -g GIVE_THE_FLAG, --give-the-flag GIVE_THE_FLAG
+                        get the flag, if given the correct value
+  -p, --print-value     print the value that will cause the -g option to give you the flag
+hacker@man~helpful-programs:~$ /challenge/challenge -p
+The secret value is: 779
+hacker@man~helpful-programs:~$ /challenge/challenge -g 779
+```
+
+## My Solve 
+The flag for the above challenge is pwn.college{k77RkJd9WuLKYjZAIXt4bZAo7qU.QX3IDO0wCN1AzNzEzW}
+
+
+
+# Help for Builtins
+We once again use the help command to be presented with different options and this is all "builtin" . After getting the code we use it as shown below. 
+
+```
+hacker@man~help-for-builtins:~$ help challenge
+challenge: challenge [--fortune] [--version] [--secret SECRET]
+    This builtin command will read you the flag, given the right arguments!
+    
+    Options:
+      --fortune		display a fortune
+      --version		display the version
+      --secret VALUE	prints the flag, if VALUE is correct
+
+    You must be sure to provide the right value to --secret. That value
+    is "EDlubPdP".
+hacker@man~help-for-builtins:~$ challenge --secret EDlubPdP
+Correct! Here is your flag!
+```
+
+## My Solve
+The flag for the challenge is pwn.college{EDlubPdP3afpIxRk8HhorbwzXL9.QX0ETO0wCN1AzNzEzW}
+
+
 
 
 
