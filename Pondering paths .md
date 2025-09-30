@@ -167,9 +167,14 @@ THe flag for the above challenge is pwn.college{Mr1qbyEAXh2JMfvfvIvWDlXqzc0.QXxU
 
 
 # Home Sweet Home
-In this challenge the home directory is /home/hacker 
+In this challenge the home directory is /home/hacker. We just have to run the below code to read back the same directory and show that the output wouldnt be
 
-
+```
+hacker@paths~home-sweet-home:~$ /challenge/run ~/~
+Writing the file to /home/hacker/~!
+... and reading it back to you:
+pwn.college{gkpPzsnbm3mtXYHE-JU-DpNW_QA.QXzMDO0wCN1AzNzEzW}
+```
 
 ## My Solve 
 THe flag for the above challenge is pwn.college{gkpPzsnbm3mtXYHE-JU-DpNW_QA.QXzMDO0wCN1AzNzEzW}
