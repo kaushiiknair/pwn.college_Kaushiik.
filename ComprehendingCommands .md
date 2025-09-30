@@ -24,19 +24,36 @@ The flag for the above challenge is pwn.college{YJ8IynkDMvPI1sJpyKEUVa4Wgpf.QXwI
 # Grepping for a needle in a haystack
 For this challenge we obtain a new command called grep which is used on bigger files then what cat is used on. Grep will search for the exact text that we want from the big file. 
 
+```
+hacker@commands~grepping-for-a-needle-in-a-haystack:~$ grep pwn.college /challenge/data.txt
+pwn.college{kFUX4zgiohfPrxDji4OUrDzHXFm.QX3EDO0wCN1AzNzEzW}
+```
+
 ## My Solve
 Flag for the above challenge is pwn.college{kFUX4zgiohfPrxDji4OUrDzHXFm.QX3EDO0wCN1AzNzEzW}
 
 
 # Comparing Files
-As stated in the challenge itself, we are comparing files to find out the different text in them. The goal is to compare the files and then obtain the flag from the file which contains the real one. This happens as when we compare the two files the difference in content among the two files is that one of them has the real one. We do this by using the diff command
+As stated in the challenge itself, we are comparing files to find out the different text in them. The goal is to compare the files and then obtain the flag from the file which contains the real one. This happens as when we compare the two files the difference in content among the two files is that one of them has the real one. We do this by using the diff command.
+
+```
+hacker@commands~comparing-files:~$ /challenge/decoys_only.txt
+bash: /challenge/decoys_only.txt: Permission denied
+hacker@commands~comparing-files:~$ /challenge/decoys_and_real.txt
+bash: /challenge/decoys_and_real.txt: Permission denied
+hacker@commands~comparing-files:~$ diff /challenge/decoys_only.txt /challenge/decoys_and_real.txt
+74a75
+```
 
 ## My Solve
 The flag for the above challenge is pwn.college{EOoNLx5lUnx3_H60ex2HboQBX7J.01MwMDOxwCN1AzNzEzW}
 
 
+
 # Listing Files
 In this challenge we learn the ls function which is basically to list out the files in all the directories. This challenge just makes us execute this to understand how it works.
+
+
 
 ## My Solve 
 The flag for the above challenge is pwn.college{MNtHPYiN4dWzeIiuEHbpJKfI57j.QX4IDO0wCN1AzNzEzW}
@@ -45,12 +62,27 @@ The flag for the above challenge is pwn.college{MNtHPYiN4dWzeIiuEHbpJKfI57j.QX4I
 # Touching Files 
 In this challenge, we need to learn how to create a new blank file which can be done by using the touch command. We have to create 2 new files using the touch command and then execute the /challenge/run command to obtain the flag
 
+```
+hacker@commands~touching-files:~$ touch /tmp/pwn
+hacker@commands~touching-files:~$ touch /tmp/college
+hacker@commands~touching-files:~$ /challenge/run
+Success! Here is your flag:
+```
+
 ## My solve 
 The flag for the above challenge is pwn.college{I-VYAukndeX9eKih3zc4JLs88tW.QXwMDO0wCN1AzNzEzW}
 
 
 # Removing Files
 Sometimes the files might be a lot and to clear it up, we have to use the rm command which can help in clearing or removing the files which arent required. We simply have to use rm file_name to remove the file we want to.
+
+```
+hacker@commands~removing-files:~$ ls
+ challenge   delete_me   flag   home   key   key.pub   not-the-flag  '~'
+hacker@commands~removing-files:~$ rm delete_me
+hacker@commands~removing-files:~$ /challenge/check
+Excellent removal. Here is your reward:
+```
 
 ## My Solve
 The flag for the above challenge is pwn.college{8jHzvWvDwgyBabtNAlNxas9C6Sq.QX2kDM1wCN1AzNzEzW}
@@ -59,6 +91,17 @@ The flag for the above challenge is pwn.college{8jHzvWvDwgyBabtNAlNxas9C6Sq.QX2k
 # Moving Files
 In this challenge we learn how to move files, and we do this by using the mv command. We have to move /flag file into /tmp/hack-the-planet, and then run the /challenge/check command to obtain the flag
 
+```
+hacker@commands~moving-files:~$ ls
+ challenge   flag   home   key   key.pub   not-the-flag  '~'
+hacker@commands~moving-files:~$ ms /flag /tmp/hack-the-planet
+bash: ms: command not found
+hacker@commands~moving-files:~$ mv  /flag /tmp/hack-the-planet
+Correct! Performing 'mv /flag /tmp/hack-the-planet'.
+hacker@commands~moving-files:~$ /challenge/check
+Congrats! You successfully moved the flag to /tmp/hack-the-planet! Here it is:
+```
+
 ## My Solve
 THe flag for the above challenge is pwn.college{AyfyWiz8YNt8tVKdjYRdzk4q7is.0VOxEzNxwCN1AzNzEzW}
 
@@ -66,12 +109,32 @@ THe flag for the above challenge is pwn.college{AyfyWiz8YNt8tVKdjYRdzk4q7is.0VOx
 # Hidden Files
 Some files might be hidden in Linux and cant be accessed when we use ls (list). In those cases we can use ls -a which is used if we want to view files which are hidden. Those files are the ones which start with a " . "
 
+```
+hacker@commands~hidden-files:~$ ls
+ challenge   flag   home   key   key.pub   not-the-flag  '~'
+hacker@commands~hidden-files:~$ ls -a
+ .    .bash_history   .config    .local      flag   key       not-the-flag
+ ..   .cache          .lesshst   challenge   home   key.pub  '~'
+hacker@commands~hidden-files:~$ /challenge/.local
+bash: /challenge/.local: No such file or directory
+hacker@commands~hidden-files:~$ cd /
+hacker@commands~hidden-files:/$ ls
+bin   challenge  etc   lib    lib64   media  nix  proc  run   srv  tmp  var
+boot  dev        home  lib32  libx32  mnt    opt  root  sbin  sys  usr
+hacker@commands~hidden-files:/$ ls -a
+.           .flag-315662203424297  challenge  home   lib64   mnt  proc  sbin  tmp
+..          bin                    dev        lib    libx32  nix  root  srv   usr
+.dockerenv  boot                   etc        lib32  media   opt  run   sys   var
+```
+
 ## My Solve
 The flag for the above challenge is pwn.college{AyfyWiz8YNt8tVKdjYRdzk4q7is.0VOxEzNxwCN1AzNzEzW}
 
 
 # An Epic Filesystem Quest
 This was the longest and hardest challenge I faced amongst all the other challenges as we had to partially combine and use some of the other functions that we learnt from the previous challenges. Based on certain clues we have to choose a directory which may have the flag in it and then we can finally obtain. This challenge is kind of a summary of all the previous challenges ive faced.
+
+
 
 # My solve
 The flag for the above challenge is pwn.college{8Yc7TkHpXUxJ536ecsQixhM_a4k.QXwUDO0wCN1AzNzEzW}
