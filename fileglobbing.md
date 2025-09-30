@@ -140,6 +140,25 @@ THe flag for the above challenge is pwn.college{0-4Ku2R-7FjUT7HN2PNpYu5uE_q.0FN0
 
 
 
+# Multiple Options for Tab Completion
+
+
+
+
+# Tab Completion On Commands 
+For this challenge we just type the initial letters 'pw' and then press tab to autofill it and then when we process the code the flag is obtained
+
+```
+hacker@globbing~tab-completion-on-commands:~$ pwncollege-7095 
+Correct! Here is your flag:
+pwn.college{wp7jijc-3Sk1oAERFp5U_9e5OEF.0VN0EzNxwCN1AzNzEzW}
+```
+
+## My Solve 
+The flag for the above solution is pwn.college{wp7jijc-3Sk1oAERFp5U_9e5OEF.0VN0EzNxwCN1AzNzEzW}
+
+
+
 
 
 
