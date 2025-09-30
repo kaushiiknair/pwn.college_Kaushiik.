@@ -141,8 +141,30 @@ THe flag for the above challenge is pwn.college{0-4Ku2R-7FjUT7HN2PNpYu5uE_q.0FN0
 
 
 # Multiple Options for Tab Completion
+After typing out the /challenge/files/ command we then press tab to get the other files and then we use trial and error to finally get the flag by using the cat function
+
+```
+hacker@globbing~multiple-options-for-tab-completion:~$ /challenge/files/
+bash: /challenge/files/: Is a directory
+hacker@globbing~multiple-options-for-tab-completion:~$ ls
+No ls for you in this level! Use tab-completion instead!
+hacker@globbing~multiple-options-for-tab-completion:~$ /challenge/files/
+bash: /challenge/files/: Is a directory
+hacker@globbing~multiple-options-for-tab-completion:~$ /challenge/files/
+hack-the-planet        pwn-college            pwncollege-family      pwncollege-flyswatter
+pwn                    pwn-the-planet         pwncollege-flamingo    pwncollege-hacking
+hacker@globbing~multiple-options-for-tab-completion:~$ /challenge/files/pwn
+pwn                    pwn-the-planet         pwncollege-flamingo    pwncollege-hacking
+pwn-college            pwncollege-family      pwncollege-flyswatter  
+hacker@globbing~multiple-options-for-tab-completion:~$ cat /challenge/files/pwn
+No flag in this file!
+hacker@globbing~multiple-options-for-tab-completion:~$ cat /challenge/files/pwncollege-flag
+pwn.college{EpmJtkEOItsykrT0AA2vJlv5QtG.0lN0EzNxwCN1AzNzEzW}
+```
+
 ## My Solve
-The flag for the above challenge is 
+The flag for the above challenge is pwn.college{EpmJtkEOItsykrT0AA2vJlv5QtG.0lN0EzNxwCN1AzNzEzW}
+
 
 
 
