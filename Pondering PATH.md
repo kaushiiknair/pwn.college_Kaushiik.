@@ -71,13 +71,56 @@ The flag for the above challenge is pwn.college{AYiCpj3GwV3R2ojdBUvSKA5G1Qa.01Nz
 # Adding Commands
 
 ```
+hacker@path~adding-commands:~$ ls /home/hacker/scripts
+ls: cannot access '/home/hacker/scripts': No such file or directory
+hacker@path~adding-commands:~$ /challenge/run
+Invoking 'win'....
+/challenge/run: line 4: win: command not found
+It looks like that did not work... Did you set PATH correctly?
+hacker@path~adding-commands:~$ cd /home
+hacker@path~adding-commands:/home$ la
+bash: la: command not found
+hacker@path~adding-commands:/home$ ls
+hacker
+hacker@path~adding-commands:/home$ cd hacker
+hacker@path~adding-commands:~$ ls
+ COLLEGE   challenge   home           key.pub   not-the-flag   saves      test-file  '~'
+ PWN       cmd1        instructions   mybin     out.sh         solve.sh   the-flag
+ asdf      flag        key            myflag    overwrites     stdout     x.sh
+hacker@path~adding-commands:~$ cd challenges
+bash: cd: challenges: No such file or directory
+hacker@path~adding-commands:~$ ls
+ COLLEGE   challenge   home           key.pub   not-the-flag   saves      test-file  '~'
+ PWN       cmd1        instructions   mybin     out.sh         solve.sh   the-flag
+ asdf      flag        key            myflag    overwrites     stdout     x.sh
+hacker@path~adding-commands:~$ cd challenge
+bash: cd: challenge: Not a directory
+hacker@path~adding-commands:~$ cd /challenge
+hacker@path~adding-commands:/challenge$ ls
+DESCRIPTION.md  run
+hacker@path~adding-commands:/challenge$ cd /run
+hacker@path~adding-commands:/run$ ls
+apache2         dojo                      log     screen           sudo     utmp
+challenge       firefox-restart-required  mount   sendsigs.omit.d  systemd
+current-system  lock                      mysqld  shm              user
+hacker@path~adding-commands:/run$ cd ..
+hacker@path~adding-commands:/$ nano /home/hacker/scripts/win
+hacker@path~adding-commands:/$ cd /home/hacker
+hacker@path~adding-commands:~$ mkdir scripts
+hacker@path~adding-commands:~$ nano /home/hacker/scripts/win
+hacker@path~adding-commands:~$ chmod +x /home/hacker/scripts/win
+hacker@path~adding-commands:~$ export PATH=/home/hacker/scripts:$PATH
+hacker@path~adding-commands:~$ /challenge/run
+Invoking 'win'....
+pwn.college{ITmv5B1LiuRLCZLQsPjBvJQZRJ5.QX2cjM1wCN1AzNzEzW}
 
 ```
 
 
 
 ## My Solve
-Thw flag for the above challenge is 
+The flag for the above challenge is pwn.college{ITmv5B1LiuRLCZLQsPjBvJQZRJ5.QX2cjM1wCN1AzNzEzW}
+
 
 
 
